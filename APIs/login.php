@@ -8,8 +8,7 @@ $query->execute();
 $query->store_result();
 $num_rows = $query->num_rows;
 $query->bind_result($id);
-$fetched = $query->fetch();
-echo $fetched;
+$query->fetch();
 $response = [];
 if($num_rows == 0){
     $response["response"] = "User Not Found";

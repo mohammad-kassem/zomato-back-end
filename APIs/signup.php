@@ -11,7 +11,7 @@ $query->store_result();
 $num_rows = $query->num_rows;
 $response = [];
 if($num_rows == 0){
-    $query = $mysqli->prepare("Insert into users (email, password, first_name, last_name) VALUES (?, ?, ?, ?)");
+    $query = $mysqli->prepare("Insert into users (email, password, first_name, last_name, date_joined) VALUES (?, ?, ?, ?, NOW())");
     $query->bind_param("ssss", $email, $password, $first_name, $last_name);
     $query->execute();
     $response["response"] = "User added successfully";
