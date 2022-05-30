@@ -1,6 +1,5 @@
 <?php
 include("connection.php");
-header('Access-Control-Allow-Origin: *');
 $user_id = $_GET["user_id"];
 $query = $mysqli->prepare("Select user_id from users where user_id = ?");
 $query->bind_param("i", $user_id);
