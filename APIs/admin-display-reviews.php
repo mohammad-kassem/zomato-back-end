@@ -28,5 +28,3 @@ $json = json_encode($response);
 echo $json;
 
 ?>
-
-<!-- http://localhost/zomato-back-end/APIs/admin-display-reviews.php' -->
