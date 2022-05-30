@@ -1,7 +1,7 @@
 <?php
 include("connection.php");
-$email = $_POST["email"];
-$password = hash("sha256", $_POST["password"]);
+if(isset($_POST["email"])) $email = $_POST["email"];
+if(isset($_POST["password"])) $password = hash("sha256", $_POST["password"]);
 $query = $mysqli->prepare("Select user_id from users where email = ? AND password = ?");
 $query->bind_param("ss", $email, $password);
 $query->execute();
