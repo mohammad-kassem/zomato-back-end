@@ -1,5 +1,7 @@
 <?php
 include("connection.php");
+header('Access-Control-Allow-Origin: *');
+
 $user_id = $_POST["user_id"];
 $restaurant_id = $_POST["restaurant_id"];
 $rating = $_POST["rating"];
