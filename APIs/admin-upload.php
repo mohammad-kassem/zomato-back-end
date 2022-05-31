@@ -9,8 +9,11 @@ $average_cost = $_POST["average_cost"];
 $description = $_POST["description"];
 $category_id = $_POST["category_id"];
 $image = $_POST["image"];
-$logo = $_POST["logo"];
-$date_joined = $_POST["date_joined"];
+// $image = "hruvr";
+// $logo = $_POST["logo"];
+$logo = "logo string";
+$date_joined = date("Y-m-d H:i:s");
+
 
 $query = $mysqli->prepare("INSERT INTO restaurants (name, location, average_cost, description, category_id, image, logo, date_joined) VALUES (?,?,?,?,?,?,?,?) ");
 $query->bind_param("ssdsisss", $name, $location, $average_cost, $description, $category_id, $image, $logo, $date_joined);

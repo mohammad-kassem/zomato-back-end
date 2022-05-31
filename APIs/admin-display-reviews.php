@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
   
 include("connection.php");
 
-$query = $mysqli->prepare("SELECT restaurants.name, users.first_name, users.last_name, reviews.rating, reviews.content, reviews.date_posted, reviews.status
+$query = $mysqli->prepare("SELECT restaurants.name, users.first_name, users.last_name, reviews.rating, reviews.content, reviews.date_posted, reviews.status, reviews.review_id
 FROM reviews 
 INNER JOIN restaurants
 ON reviews.restaurant_id = restaurants.restaurant_id
